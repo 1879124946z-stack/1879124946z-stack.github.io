@@ -1,0 +1,12 @@
+层级,变量名,类型,含义,编码或单位
+逐试次,condition,分类,侧翼条件,congruent一致; incongruent不一致
+逐试次,target_direction,分类,中央目标方向,left; right
+逐试次,correct,整数,反应是否正确,0否; 1是
+逐试次,rt_ms,数值,刺激出现至反应的时长,ms
+逐试次,valid_rt,整数,是否进入反应时分析,0否; 1是
+逐试次,timeout,整数,是否超时未反应,0否; 1是
+逐试次,anticipatory,整数,是否小于200ms,0否; 1是
+汇总,overall_accuracy,数值,正式试次总正确率,0-1
+汇总,rt_interference_ms,数值,不一致减一致条件正确RT中位数,ms; 越大表示干扰越强
+汇总,accuracy_interference_pp,数值,一致减不一致正确率,百分点
+汇总,rt_sd_ms,数值,有效正确反应时样本标准差,ms

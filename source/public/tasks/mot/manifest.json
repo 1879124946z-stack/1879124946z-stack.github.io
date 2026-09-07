@@ -1,0 +1,10 @@
+{
+  "id": "mot",
+  "name": "多目标追踪 MOT",
+  "version": "climb-mot-1.0.0",
+  "durationMinutes": 8,
+  "domain": "动态注意",
+  "description": "在不同速度下同时追踪3个目标的识别正确率",
+  "entry": "index.html",
+  "outputFields": ["speed_level", "target_count", "hits", "tracking_accuracy", "all_correct", "selection_latency_ms"]
+}

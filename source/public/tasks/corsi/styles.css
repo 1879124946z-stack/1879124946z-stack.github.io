@@ -1,0 +1,19 @@
+.corsi-preview { position: relative; height: 260px; margin: 26px 0; border: 1px solid #cfdae2; border-radius: 14px; background: #f2f6f8; }
+.corsi-board { position: relative; width: min(850px, 90vw); height: 520px; border: 1px solid #cad5dd; border-radius: 14px; background: #eef3f6; }
+.corsi-block { position: absolute; width: 88px; height: 88px; display: grid; place-items: center; border: 3px solid #173a56; border-radius: 10px; color: #24445d; background: #fff; box-shadow: 0 8px 18px rgba(28,55,77,.1); font-size: 22px; font-weight: 900; user-select: none; }
+button.corsi-block { transition: background .12s ease, border-color .12s ease, transform .12s ease; }
+button.corsi-block:hover:not(:disabled) { border-color: #2d78ae; background: #f5fbff; transform: translateY(-2px); }
+.corsi-block.flash { border-color: #175f99; color: #fff; background: #2877b2; box-shadow: 0 12px 24px rgba(40,119,178,.22); }
+.corsi-block.chosen { border-color: #176b58; color: #176b58; background: #e2f2ec; }
+.corsi-block:disabled { cursor: default; }
+.corsi-preview .corsi-block { width: 48px; height: 48px; border-width: 2px; border-radius: 7px; box-shadow: none; }
+.corsi-status { display: grid; place-items: center; min-width: 190px; min-height: 42px; color: #52697a; font-size: 16px; font-weight: 800; }
+.corsi-status.watch { color: #195b91; }
+.corsi-status.respond { color: #176b58; }
+@media (max-width: 640px) {
+  .corsi-preview { height: 220px; }
+  .corsi-board { width: 100%; height: min(440px, 62dvh); }
+  .corsi-block { width: clamp(50px, 17vw, 72px); height: clamp(50px, 17vw, 72px); border-width: 2px; font-size: 18px; transform: translate(-8%, -8%); }
+  button.corsi-block:hover:not(:disabled) { transform: translate(-8%, -8%); }
+  .corsi-status { min-width: 0; font-size: 14px; }
+}

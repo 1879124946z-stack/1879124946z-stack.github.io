@@ -1,0 +1,16 @@
+层级,变量名,类型,含义,编码或单位
+逐试次,form_id,分类,前后测等值题式,A; B
+逐试次,minimum_moves,整数,起始到目标状态的最短路径,步
+逐试次,moves_made,整数,儿童实际完成的合法移动次数,步
+逐试次,solved,整数,是否在限制内达到目标,0否; 1是
+逐试次,perfect_solution,整数,是否用最少步数达到目标,0否; 1是
+逐试次,excess_moves,数值,实际步数减最少步数,步; 未解决为空
+逐试次,planning_time_ms,数值,题目出现至首次合法移动,ms
+逐试次,execution_time_ms,数值,首次合法移动至结束,ms
+逐试次,rule_violations,整数,空柱取球或向满柱放球次数,次
+逐试次,move_sequence,文本,每次合法移动的起止柱,例如1>2;3>1
+逐试次,stop_reason,分类,试次结束原因,solved; max_moves; time_limit
+汇总,solved_rate,数值,正式题解决比例,0-1
+汇总,perfect_solution_rate,数值,正式题最少步完美解决比例,0-1
+汇总,mean_excess_moves_solved,数值,仅已解决题的平均多余步数,步
+汇总,median_planning_time_ms,数值,正式题计划时间中位数,ms

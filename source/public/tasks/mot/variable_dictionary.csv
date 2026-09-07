@@ -1,0 +1,13 @@
+层级,变量名,类型,含义,编码或单位
+逐试次,speed_level,分类,运动速度条件,slow; medium; fast
+逐试次,speed_px_per_s,数值,名义运动速度,px/s
+逐试次,target_indices,文本,目标圆点编号,编号以-分隔
+逐试次,selected_indices,文本,选择圆点编号,编号以-分隔
+逐试次,hits,整数,正确选中的目标数,0-3
+逐试次,false_alarms,整数,误选的非目标数,0-3
+逐试次,tracking_accuracy,数值,命中数除以3,0-1
+逐试次,all_correct,整数,是否3个目标全部选对,0否; 1是
+逐试次,selection_latency_ms,数值,圆点停止至确认选择的时长,ms
+逐试次,visibility_interruptions,整数,本题页面进入后台次数,次
+汇总,overall_tracking_accuracy,数值,正式试次平均追踪正确率,0-1
+汇总,overall_all_correct_rate,数值,正式试次全部命中率,0-1

@@ -1,0 +1,14 @@
+# Replace placeholders. This file is a deployment example, not a live config.
+server {
+    listen 443 ssl;
+    server_name REPLACE_WITH_ACTUAL_DOMAIN;
+    ssl_certificate /REPLACE_WITH_CERTIFICATE_PATH;
+    ssl_certificate_key /REPLACE_WITH_PRIVATE_KEY_PATH;
+    client_max_body_size 8m;
+    location / {
+        proxy_pass http://127.0.0.1:3000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-Proto https;
+        proxy_read_timeout 45s;
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "tol",
+  "name": "伦敦塔",
+  "version": "climb-tol-1.0.0",
+  "domain": "计划性问题解决",
+  "durationMinutes": 12,
+  "entry": "index.html",
+  "description": "三球伦敦塔任务，记录完美解、计划时间、执行时间、多余步数与规则违反。",
+  "outputFields": ["minimum_moves", "solved", "perfect_solution", "planning_time_ms", "execution_time_ms", "excess_moves", "rule_violations"]
+}

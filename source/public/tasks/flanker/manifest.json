@@ -1,0 +1,10 @@
+{
+  "id": "flanker",
+  "name": "儿童箭头 Flanker",
+  "version": "climb-flanker-1.1.0",
+  "durationMinutes": 6,
+  "domain": "抑制控制",
+  "description": "一致与不一致条件的正确率、反应时及干扰效应",
+  "entry": "index.html",
+  "outputFields": ["condition", "target_direction", "correct", "rt_ms", "rt_interference_ms", "accuracy_interference_pp"]
+}
