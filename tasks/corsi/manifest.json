@@ -1,0 +1,10 @@
+{
+  "id": "corsi",
+  "name": "Corsi 方块敲击",
+  "version": "climb-corsi-1.1.0",
+  "durationMinutes": 8,
+  "domain": "视空间工作记忆",
+  "description": "顺背与倒背空间广度、正确序列数和乘积得分",
+  "entry": "index.html",
+  "outputFields": ["phase", "sequence_length", "correct", "forward_span", "backward_span", "product_score"]
+}

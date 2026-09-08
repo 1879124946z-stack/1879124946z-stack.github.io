@@ -1,0 +1,23 @@
+.flanker-demo { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; margin: 28px 0; padding: 24px; border-top: 1px solid #dbe3e9; border-bottom: 1px solid #dbe3e9; }
+.flanker-demo > div { text-align: center; }
+.flanker-demo strong { display: block; margin-bottom: 10px; color: #496174; font-size: 13px; }
+.arrow-row { display: flex; align-items: center; justify-content: center; gap: 10px; color: #183b58; font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif; }
+.arrow-row span { display: block; font-size: 64px; line-height: 1; }
+.arrow-row .target-arrow { color: #195b91; font-size: 64px; font-weight: 900; }
+.flanker-demo .arrow-row span { font-size: 42px; }
+.flanker-demo .arrow-row .target-arrow { font-size: 42px; }
+.demo-divider { color: #8ea0af; font-size: 28px; }
+.flanker-stimulus { width: 100%; min-height: 340px; display: grid; place-items: center; }
+.flanker-stimulus .arrow-row { gap: 16px; }
+.flanker-stimulus .arrow-row span { font-size: 86px; }
+.flanker-stimulus .arrow-row .target-arrow { font-size: 86px; }
+.target-caption { margin-top: 26px; color: #6a7c8b; font-size: 15px; text-align: center; }
+.target-caption strong { color: #195b91; }
+@media (max-width: 640px) {
+  .flanker-demo { grid-template-columns: 1fr; gap: 12px; margin: 18px 0; padding: 16px 8px; }
+  .demo-divider { transform: rotate(90deg); }
+  .flanker-stimulus { min-height: 240px; }
+  .flanker-stimulus .arrow-row { gap: 5px; }
+  .flanker-stimulus .arrow-row span,
+  .flanker-stimulus .arrow-row .target-arrow { font-size: clamp(42px, 14vw, 60px); }
+}

@@ -1,0 +1,93 @@
+:root {
+  --ink: #14283d;
+  --muted: #5d7183;
+  --line: #d2dce5;
+  --paper: #ffffff;
+  --ground: #edf2f6;
+  --blue: #195b91;
+  --blue-dark: #12446d;
+  --blue-soft: #e7f0f7;
+  --green: #16735d;
+  --amber: #9b6818;
+  --red: #a13b3b;
+  --shadow: 0 18px 46px rgba(20, 50, 76, .11);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; background: var(--ground); color: var(--ink); font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif; }
+body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr; }
+button { font: inherit; cursor: pointer; touch-action: manipulation; }
+button:focus-visible, [tabindex]:focus-visible { outline: 4px solid #89b8df; outline-offset: 3px; }
+::selection { color: #fff; background: var(--blue); }
+
+.task-topbar { min-height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 10px 24px; border-bottom: 1px solid var(--line); background: var(--paper); }
+.task-topbar strong { font-size: 15px; }
+.task-topbar span { color: var(--muted); font-size: 12px; }
+#app { min-height: calc(100vh - 56px); display: grid; place-items: center; padding: 20px; }
+
+.intro-card { width: min(900px, 100%); padding: 38px 44px; border: 1px solid var(--line); border-radius: 16px; background: var(--paper); box-shadow: var(--shadow); }
+.intro-card h1 { margin: 0 0 12px; font-size: 34px; line-height: 1.25; letter-spacing: -.02em; }
+.intro-card > p { max-width: 68ch; margin: 0; color: var(--muted); font-size: 18px; line-height: 1.75; }
+.instruction-list { display: grid; gap: 13px; margin: 28px 0; padding: 0; list-style: none; }
+.instruction-list li { display: grid; grid-template-columns: 34px 1fr; align-items: center; gap: 13px; color: #31485d; font-size: 17px; line-height: 1.55; }
+.instruction-list span { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 8px; color: #fff; background: var(--blue); font-size: 13px; font-weight: 800; }
+.primary-button, .secondary-button { min-height: 52px; padding: 11px 25px; border-radius: 11px; font-weight: 800; }
+.primary-button { border: 0; color: #fff; background: var(--blue); }
+.primary-button:hover { background: var(--blue-dark); }
+.secondary-button { border: 1px solid #bfcbd5; color: #365168; background: #fff; }
+.primary-button:disabled, .secondary-button:disabled { cursor: not-allowed; opacity: .45; }
+.button-row { display: flex; align-items: center; gap: 12px; margin-top: 28px; }
+.quiet-note { margin-left: 10px; color: var(--muted); font-size: 13px; }
+
+.test-panel { width: min(1100px, 100%); min-height: 650px; display: grid; grid-template-rows: auto 1fr auto; overflow: hidden; border-radius: 16px; background: #fff; box-shadow: var(--shadow); outline: none; }
+.trial-header { min-height: 54px; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; border-bottom: 1px solid #e0e6eb; color: var(--muted); font-size: 13px; }
+.trial-header strong { color: var(--ink); }
+.stimulus-zone { position: relative; min-height: 500px; display: grid; place-items: center; overflow: hidden; }
+.trial-footer { min-height: 72px; display: flex; align-items: center; justify-content: center; gap: 18px; padding: 10px 20px; border-top: 1px solid #e0e6eb; color: var(--muted); font-size: 14px; }
+.response-key { min-width: 140px; min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid #b9c8d4; border-radius: 10px; color: #274760; background: #f8fafb; font-weight: 800; }
+.response-key:hover { border-color: #6e9dc2; background: #eef5fa; }
+.fixation { color: #1d3448; font: 700 62px "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif; }
+.feedback { min-height: 40px; color: var(--muted); font-size: 20px; font-weight: 800; }
+.feedback.good { color: var(--green); }
+.feedback.bad { color: var(--red); }
+.feedback.neutral { color: var(--amber); }
+
+.break-card { width: min(680px, 100%); padding: 42px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: var(--shadow); text-align: center; }
+.break-card h2 { margin: 0 0 12px; font-size: 29px; }
+.break-card p { margin: 0; color: var(--muted); font-size: 17px; line-height: 1.7; }
+.break-card button { margin-top: 26px; }
+.completion-screen { width: min(720px, 100%); padding: 54px; text-align: center; }
+.completion-check { width: 78px; height: 78px; display: grid; place-items: center; margin: 0 auto 24px; border-radius: 50%; color: #fff; background: var(--green); font-size: 42px; font-weight: 900; box-shadow: 0 18px 38px rgba(22,115,93,.2); }
+.completion-screen h1 { margin: 0; font-size: 36px; }
+.completion-screen p { margin: 12px 0 0; color: var(--muted); font-size: 20px; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+[hidden] { display: none !important; }
+
+@media (max-width: 640px) {
+  .task-topbar { min-height: 48px; padding: 8px 12px; }
+  .task-topbar strong { font-size: 13px; }
+  .task-topbar span { font-size: 11px; }
+  #app { min-height: calc(100dvh - 48px); padding: 10px; }
+  .intro-card { padding: 24px 18px; border-radius: 12px; }
+  .intro-card h1 { font-size: 27px; }
+  .intro-card > p { font-size: 16px; }
+  .instruction-list { margin: 20px 0; }
+  .instruction-list li { grid-template-columns: 30px 1fr; font-size: 15px; }
+  .button-row { align-items: stretch; flex-direction: column; }
+  .button-row button { width: 100%; }
+  .quiet-note { margin: 0; text-align: center; }
+  .test-panel { min-height: calc(100dvh - 68px); border-radius: 10px; }
+  .trial-header { min-height: 48px; padding: 0 14px; }
+  .stimulus-zone { min-height: 0; }
+  .trial-footer { min-height: 74px; gap: 10px; padding: 8px 10px; }
+  .response-key { min-width: 0; min-height: 52px; flex: 1; }
+  .break-card { padding: 30px 18px; }
+  .completion-screen { padding: 36px 18px; }
+  .completion-screen h1 { font-size: 29px; }
+  .completion-screen p { font-size: 17px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}

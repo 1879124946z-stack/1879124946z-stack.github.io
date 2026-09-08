@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>儿童高级/混合版 DCCS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <strong>儿童高级/混合版 DCCS</strong>
+      <span id="versionLabel" class="version"></span>
+    </div>
+    <div id="progressLabel" class="progress-label">研究者设置</div>
+  </header>
+  <section id="taskProgress" class="task-progress" aria-label="任务完成进度" hidden>
+    <div class="task-progress-meta">
+      <strong id="progressCount">已完成 0/0 题</strong>
+      <span id="progressRemaining">剩余 0 题</span>
+      <span id="progressTime">预计剩余时间：—</span>
+    </div>
+    <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div id="progressFill" class="progress-fill"></div>
+    </div>
+  </section>
+  <main id="app" aria-live="polite"></main>
+  <footer class="footer-note">仅记录研究编号，不填写儿童姓名。正式测试建议关闭通知并保持同一设备、浏览器和按键方式。</footer>
+  <script src="app.js"></script>
+</body>
+</html>

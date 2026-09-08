@@ -1,0 +1,12 @@
+层级,变量名,类型,含义,编码或单位
+逐试次,phase,分类,任务阶段,forward顺背; backward倒背
+逐试次,sequence_length,整数,本题序列长度,个
+逐试次,presented_sequence,文本,实际呈现的位置序列,位置编号以-分隔
+逐试次,response_sequence,文本,儿童点击的位置序列,位置编号以-分隔
+逐试次,correct,整数,完整序列是否正确,0否; 1是
+逐试次,first_tap_latency_ms,数值,可点击至首次点击的时长,ms
+汇总,forward_span,整数,顺背最高正确序列长度,个
+汇总,backward_span,整数,倒背最高正确序列长度,个
+汇总,forward_product_score,整数,顺背广度乘正确序列数,分
+汇总,backward_product_score,整数,倒背广度乘正确序列数,分
+汇总,combined_total_correct,整数,顺背与倒背正确序列总数,题
